@@ -57,9 +57,13 @@ set :images_dir, 'images'
 
 sprockets.append_path 'vendor/assets/stylesheets'
 
+activate :directory_indexes
+
+proxy "/", "r.html"
+
 activate :deploy do |deploy|
   deploy.method = :git
-  
+
 end
 
 # Build-specific configuration

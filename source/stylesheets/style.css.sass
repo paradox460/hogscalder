@@ -1,0 +1,51 @@
+//= require normalize
+@import "bourbon/bourbon"
+
+body
+  display: flex
+  justify-content: center
+  align-items: center
+  font-family: $helvetica
+
+#container
+  text-align: center
+  width: em(600)
+
+$medium-screen: em(430)
+
+h1
+  font-size: em(50)
+  @media screen and (max-width: $medium-screen)
+    font-size: em(40)
+
+
+h2
+  font-size: em(30)
+  @media screen and (max-width: $medium-screen)
+    font-size: em(20)
+
+img
+  width: 100%
+  height: auto
+
+@keyframes rainbow
+  0%
+    color: red
+  14%
+    color: orange
+  27%
+    color: yellow
+  42%
+    color: green
+  56%
+    color: blue
+  70%
+    color: indigo
+  84%
+    color: violet
+  100%
+    color: red
+  
+
+h1, h2
+  animation: rainbow 10s linear infinite

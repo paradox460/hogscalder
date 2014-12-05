@@ -59,11 +59,10 @@ sprockets.append_path 'vendor/assets/stylesheets'
 
 activate :directory_indexes
 
-proxy "/", "r.html"
+proxy "/index.html", "r.html"
 
 activate :deploy do |deploy|
   deploy.method = :git
-
 end
 
 # Build-specific configuration
